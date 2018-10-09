@@ -1,8 +1,7 @@
 #!groovy
 
-node {
-	   
-	stage('Checkout'){
+node {   
+	stage('Checkout from GITHUB'){
 
           checkout scm
        }
@@ -11,12 +10,12 @@ node {
 
          // sh 'mvn install'
 	       
-	       sh 'mvn clean'
+	       sh 'mvn clean package'
        }
 	   
-      stage('Sonar') {
+     /* stage('Sonar') {
                     //add stage sonar
-                   // sh 'mvn sonar:sonar'
-                }
+                    sh 'mvn sonar:sonar'
+                }*/
        
 }
