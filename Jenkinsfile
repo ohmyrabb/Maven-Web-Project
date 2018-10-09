@@ -27,6 +27,6 @@ node {
 	
 	
        stage('Deploying to tomcat'){
-        bat copy \target\*.war C:\Devops-Softwares\tomcat\apache-tomcat-9.0.10\webapps\
+        bat copy C:\Users\Rabbani\.jenkins\workspace\MavenPipelineProject\target\maven-web-project-1.1.war C:\Devops-Softwares\tomcat\apache-tomcat-9.0.10\webapps\
        }
 }
